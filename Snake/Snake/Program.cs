@@ -11,29 +11,31 @@ namespace Snake
         static void Main(string[] args)
         {
             Point p1 = new Point(1, 3, '*');
-            /*
-            p1.x = 1;
-            p1.y = 3;
-            p1.sym = '*'; */
-            p1.Draw();
-            
-
-            /*
-            int x1 = 1;
-            int y1 = 3;
-            char sym1 = '*';
-            Draw(x1, y1, sym1);*/
+            Move(p1, 10, 10);
 
             Point p2 = new Point(4, 5, '#');
-            p2.Draw();
+            p2 = p1;
 
-            /*
-            int x2 = 4;
-            int y2 = 5;
-            char sym2 = '#';
-            Draw(x2, y2, sym2);*/
+            Console.WriteLine("p2.x = " + p2.x);
+            Console.WriteLine("p2.y = " + p2.y);
+            Console.WriteLine("p2.sym = " + p2.sym);
+            Console.WriteLine();
+            //p2.Draw();
+
+            Console.WriteLine("p1.x = " + p1.x);
+            Console.WriteLine("p1.y = " + p1.y);
+            Console.WriteLine("p1.sym = " + p1.sym);
+            //p1.Draw();
 
             Console.ReadLine();
+
+            
+        }
+
+        public static void Move(Point p, int dx, int dy)
+        {
+            p.x += dx;
+            p.y += dy;
         }
 
     }   
